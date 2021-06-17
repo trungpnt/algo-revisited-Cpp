@@ -27,14 +27,32 @@ void create(int A[], int n)
     }
 }
 
-void display(struct Node *p){
-    while( p != NULL){
-        printf("%d ", p ->data);
-        p = p ->next;
+void display(struct Node *p)
+{
+    while (p != NULL)
+    {
+        printf("%d ", p->data);
+        p = p->next;
     }
 }
 
-void RDisplay()
+void display_recursion(struct Node *p)
+{
+    if (p != NULL)
+    {
+        printf("%d ", p->data);
+        display_recursion(p->next);
+    }
+}
+
+void reverse_display_recursion(struct Node *p)
+{
+    if (p != NULL)
+    {
+        reverse_display_recursion(p->next);
+        printf("%d ", p->data);
+    }
+}
 
 int main()
 {
