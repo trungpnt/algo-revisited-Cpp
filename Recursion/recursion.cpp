@@ -16,9 +16,26 @@ void tail_recursion(int n) {
     }
 }
 
-void stattic_var_recursion(int n) {
-    
+int static_var_recursion(int n) {
+    static int x = 0;
+    if(n>0){
+        x++;
+        return static_var_recursion(n-1) + x;
+    }
+    return 0;
 }
+
+//Global variable
+int x = 0;
+
+int global_var_recursion(int n){
+    if( n > 0){
+        x++;
+        return global_var_recursion(n-1) + x;
+    }
+    return 0;
+}
+
 
 
 
