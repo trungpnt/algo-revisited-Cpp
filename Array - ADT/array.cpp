@@ -83,8 +83,14 @@ struct Array * merge( struct Array *a1, struct Array *a2){
     return a3;
 }
 
+/****SET OPERATIONS ON ARRAYS****/
+struct Array * Union (struct Array *a1, struct Array *a2);
+struct Array * Intersection (struct Array *a1, struct Array *a2);
+struct Array * Difference (struct Array *a1, struct Array *a2);
+
+
 int main(){
 
-    
+
     return 0;
 }
