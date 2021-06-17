@@ -51,7 +51,40 @@ void swap(int *x, int *y){
     *y = temp;
 }
 
+int linear_search(struct Array *a, int key){
+    for (int i = 0; i < a ->length; i++){
+        if ( key == a->A[i]){
+            swap(&a ->A[i], &a->A[i+1]);
+            return i;
+        }
+    }
+}
+
+struct Array * merge( struct Array *a1, struct Array *a2){
+    int i,j,k;
+    i = j= k = 0;
+    struct Array *a3 = (struct Array*) malloc(sizeof(struct Array));
+    while( i < a1 ->length && j < a2 ->length ){
+        if( a1 -> A[i] < a2 ->A[j]){
+            a3 ->A[k++] = a1 -> A[i++];
+        }
+        else{
+            a3 -> A[k++] = a2 ->A[j++];
+        }
+    }
+    //remaining
+    for (; i < a1 ->length; i++){
+        a3 -> A[k++] = a1 ->A[i];
+    }
+    for(; j < a2 ->length; j++){
+        a3 -> A[k++] = a2 ->A[j];
+    }
+    a3 ->length = a1 ->length + a2 ->length;
+    return a3;
+}
+
 int main(){
+
     
     return 0;
 }
