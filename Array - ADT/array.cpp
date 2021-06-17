@@ -33,6 +33,18 @@ void insert(struct Array *a, int index, int x){
     }
 }
 
+int delete(struct Array *a, int index){
+    int x = 0;
+    int i;
+    if ( index >= 0 && index < a->length){
+        x = a->A[index];
+        for(i = index; i < a->length - 1; i++){
+            a ->A[i] = a->A[i+1];
+        }
+    }
+    return 0;
+}
+
 int main(){
     return 0;
 }
