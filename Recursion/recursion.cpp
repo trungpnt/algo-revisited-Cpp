@@ -61,6 +61,16 @@ void recursion_B(int n){
     }
 }
 
+//NESTED RECURSION
+int nested_recursion(int n){
+    if(n>100){
+        return n - 10;
+    }
+    else{
+        return nested_recursion(nested_recursion(n+11));
+    }
+}
+
 
 
 int main()
