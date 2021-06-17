@@ -45,6 +45,22 @@ void tree_recursion(int n){
     }
 }
 
+//INDIRECT RECURSION
+void recursion_B(int n);
+void recursion_A(int n){
+    if ( n > 0) {
+        cout << n << " ";
+        recursion_B(n-1);
+    }
+}
+
+void recursion_B(int n){
+    if ( n > 1) {
+        cout << n << " ";
+        recursion_A(n/2);
+    }
+}
+
 
 
 int main()
