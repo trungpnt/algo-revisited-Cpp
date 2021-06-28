@@ -88,6 +88,9 @@ struct Array * Union (struct Array *a1, struct Array *a2);
 struct Array * Intersection (struct Array *a1, struct Array *a2);
 struct Array * Difference (struct Array *a1, struct Array *a2);
 
+struct Array *Union (struct Array *a1, struct Array *a2){
+    
+}
 
 int main(){
 
